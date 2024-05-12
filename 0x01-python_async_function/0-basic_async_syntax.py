@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-# created by Albert Ezoula
-import random
+'''Task 0's module.
+'''
 import asyncio
+import random
 
 
-async def wait_random(max_delay=10):
-    """waits for a random delay between 0 and max_delay"""
-    waited = random.random() * max_delay
-    await asyncio.sleep(waited)
-    return waited
+async def wait_random(max_delay: int = 10) -> float:
+    '''Waits for a random number of seconds.
+    '''
+    wait = random.random() * max_delay
+    await asyncio.sleep(wait)
+    return wait
